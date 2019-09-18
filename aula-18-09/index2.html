@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    Numero: <input type="number" id="num"><br/>
+    Divisivel por: <input type="number" id="divPor">
+    <p id="resultado"></p>
+
+    <button onclick="mostrar()">mostrar</button>
+
+    <script>
+        function mostrar()
+        {
+            document.getElementById("resultado").innerHTML = " ";
+            var num = document.getElementById("num").value;
+            var divPor = document.getElementById("divPor").value;
+            var millisecondsToWait = 500;
+                setTimeout(function() 
+                {
+                    for (cont = 1; cont <= num; cont++)
+                    {
+                        if (cont % divPor == 0)
+                        {
+                            document.getElementById("resultado").innerHTML += cont + " ";
+                            
+                        }
+                    }
+                }, millisecondsToWait);
+        }
+    
+    </script>
+</body>
+</html>

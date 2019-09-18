@@ -1,0 +1,38 @@
+.margin-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    
+}
+body{
+    background-color: #333;
+    color: white;
+}
+p{
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    margin-right: 1200px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.btn{
+    padding: 5px 30px 5px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+#btn-somar{
+    background-color: blueviolet;
+}
+#btn-sub{
+    background-color: darkorange;
+}
+#btn-mult{
+    background-color: darkgreen;
+}
+#btn-div{
+    background-color: red;
+}
