@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prática JS</title>
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+	
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-primary bg-light">
+  <a class="navbar-brand font-wei" href="home.html">Prática JS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Filtragem de lista</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="porcentagem.html">Calculadora de %</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="media.html">Média</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Filtragem de lista</li>
+  </ol>
+</nav>
+
+<div class="container mt-4">
+  <input type="text" id="input-filtro" oninput="off_filtrar()"/>
+  <button id="btn-filtrar" onclick="filtrar()" >Filtrar</button>
+	<ul id="list"></ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+	// CRIAÇÃO DE CONSTANTE DATA PARA ARMAZENAR NOME DOS ANIMAIS QUE IRÁ PARA A LISTA
+      const data = [
+        "Baleias",
+        "Cachorros",
+        "Cavalos",
+        "Cobra",
+        "Crocodilo",
+        "Elefantes",
+        "Frango/Galinha",
+        "Gambá",
+        "Gatos",
+        "Golfinho",
+        "Leões",
+        "Girafa",
+        "Lobos",
+        "Macacos",
+        "Ovelha",
+        "Papagaio",
+        "Polvo",
+        "Pombos",
+        "Rinocerontes",
+        "Tartarugas",
+        "Touro",
+        "Ursos",
+        "Vaca"
+      ]
+
+      //
+      data.forEach(function list(value){
+      	//
+      	document.getElementById("list").innerHTML += '<li>'+value+'</li>';
+      });
+      
+      //
+      function filtrar(){
+      	//adiciona filtragem no click do botão
+      	document.getElementById("list").innerHTML = '';
+        var texto = document.getElementById("input-filtro").value;
+      	data.forEach(function list(value){
+      		if (value.toLowerCase().includes(texto.toLowerCase())){
+      			document.getElementById("list").innerHTML += '<li>'+value+'</li>';
+      		}
+      	});
+      }
+      //tira filtragem quando digita no input
+      function off_filtrar(){
+        document.getElementById("list").innerHTML = '';
+        data.forEach(function list(value){
+      	document.getElementById("list").innerHTML += '<li>'+value+'</li>';
+        });
+      }
+
+
+</script>
+
+
+</body>
+</html>

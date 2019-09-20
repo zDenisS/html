@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prática JS</title>
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+	
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-primary bg-light">
+  <a class="navbar-brand font-wei" href="home.html">Prática JS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Filtragem de lista</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="porcentagem.html">Calculadora de %</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="media.html">Média</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Média</li>
+  </ol>
+</nav>
+
+<div class="container mt-4">
+  Nota Trabalho: <input class="mg-cd" id="nota1" type="number"><br/>
+  Nota Prova: <input class="mg-cd" id="nota2" type="number"><br/>
+  Média: <input class="mg-cd" id="media" type="number"><br/>
+  <button class="mg-cd" onclick="calcular_media()">Calcular</button>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+  function calcular_media(){
+    var nota1 =Number(document.getElementById("nota1").value);
+    var nota2 =Number(document.getElementById("nota2").value);
+    var resultado = (nota1+nota2)/2;
+    document.getElementById("media").value = resultado;
+  }
+</script>
+
+</body>
+</html>
